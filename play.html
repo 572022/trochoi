@@ -1,0 +1,244 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    @media only screen and (max-width: 600px) {
+        .chu{
+        width: 100% !important;
+        padding: 0.1rem !important;    
+    }
+    body{
+        background-image: url("https://i.pinimg.com/564x/d1/93/13/d19313578e0154c226ede8b976d757a7.jpg");
+    }
+    #over_anh{
+      max-width: 100%;
+    }
+    .cl img{
+        max-width: 95%;
+        object-fit: contain;
+    }
+    .chu{
+       height: auto;
+        width: 80%;
+        text-align: center;
+        padding: 3rem;
+        box-sizing: border-box;
+       display: none;
+    }
+ 
+    .cl img{
+        width: 100%;
+        object-fit: cover;
+    }
+    #container{
+           overflow: hidden;
+           height: auto;
+           padding:10px;
+           box-sizing: border-box;
+         
+    }
+}
+    #over_anh{ 
+     margin-top: 3%;
+       width: 1024px;
+    }
+    
+    .character{
+        color:green;
+        font-weight: bolder;
+        font-size: 4rem;
+        margin: 10px;
+        width:200px;
+        border:1px solid;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    span{
+        color:rgb(128, 0, 0);
+        font-weight: bolder;
+        font-size: 3rem;
+       margin:5px;
+    }
+    .do{
+        padding: 8px 10px;
+        clear: both;
+        background-color: rgba(20, 236, 20, 0.737);
+        color: rgb(28, 108, 28);
+        font-size: 1.5rem;
+        font-weight: bolder;
+        border-radius: 5px;
+        border: none;
+        box-shadow: 0px 1px 3px 1px rgb(10, 56, 10);
+    }
+    .back{
+        position: fixed;
+        top: 80%;
+    }
+    .back img{
+        width:30%;
+    }
+
+</style>
+<body>
+    <a href="play.html"><h1><i class="fa fa-bars menu"></i></h1></a>
+    <div id="container">
+        <div id="over_anh">
+
+    <div class="chu">
+        <div class="character">A a</div>
+        <div class="cl">
+            <img src="https://cdn.pixabay.com/photo/2021/06/18/10/39/mug-6345796_960_720.jpg">
+            <span>Cái ca</span>
+        </div>
+    </div>
+
+    <div class="chu">
+        <div class="character">B b</div>
+        <div class="cl">
+            <img src="con bo.jpg">
+            <span>Con bò</span>
+        </div>
+    </div>
+
+    <div class="chu">
+        <div class="character">C c</div>
+        <div class="cl">
+            <img src="con ca.jpg">
+            <span>Con cá</span>
+        </div>
+    </div>
+
+    <div class="chu">
+        <div class="character">D d</div>
+        <div class="cl">
+            <img src="dua hau.jpg">
+            <span>Dưa hấu</span>
+        </div>
+    </div>
+
+    <div class="chu">
+        <div class="character">E e</div>
+        <div class="cl">
+            <img src="embe.jpg">
+            <span>Em bé</span>
+        </div>
+    </div>
+    <div class="chu">
+        <div class="character">G g</div>
+        <div class="cl">
+            <img src="con ga.jpg">
+            <span>Con gà</span>
+        </div>
+    </div>
+    
+    <div class="chu">
+        <div class="character">H h</div>
+        <div class="cl">
+            <img src="dongho.jpg">
+            <span>Đồng hồ</span>
+        </div>
+    </div>
+
+    <div class="chu">
+        <div class="character">I i</div>
+        <div class="cl">
+            <img src="tivi.jpg">
+            <span>Ti vi</span>
+        </div>
+    </div>
+    <div class="chu">
+        <div class="character">K k</div>
+        <div class="cl">
+            <img src="caikeo.jpg">
+            <span>Cái kéo</span>
+        </div>
+    </div>
+    <div class="chu">
+        <div class="character">L n</div>
+        <div class="cl">
+            <img src="la.jpg">
+            <span>Cái Lá</span>
+        </div>
+    </div>
+  
+    <div class="chu">
+        <div class="character">M m</div>
+        <div class="cl">
+        <img src="me.jpg">
+            <span>Mẹ</span>
+            </div>
+    </div>
+   
+</div>
+
+
+
+<!-- move -->
+<button onclick="move()" class="do">Thực hành</button>
+</div>
+<div class="back">
+    <img src="https://i.pinimg.com/originals/91/1e/b1/911eb1f2cff48f9a4179835007eb7fbd.gif"> 
+    <img src="https://i.pinimg.com/originals/5b/25/32/5b253274a288f50f5dff4bdb89a7164e.gif">
+    <img src="https://i.pinimg.com/originals/47/0f/26/470f268053139ce2d9923c17dc3d6a55.gif">
+</div>
+</body>
+<script>
+   
+    // document.getElementsByClassName('cl')[0].onclick=function(){
+    //      var audio=new Audio('intro5s.mp3');
+    //      audio.play();
+    // }
+    let p=[
+        {name:'a', mp3:'a.mp3', words:"ca.mp3"},
+        {name:'b', mp3:'b.mp3', words:"bo.mp3"},
+        {name:'c', mp3:'c.mp3', words:"con ca.mp3"}, 
+        {name:'d', mp3:'d.mp3', words:"dua.mp3"}, 
+        {name:'e', mp3:'e.mp3', words:"embe.mp3"}, 
+        {name:'g', mp3:'g.mp3', words:"ga.mp3"}, 
+        {name:'h', mp3:'h.mp3', words:"dongho.mp3"}, 
+        {name:'i', mp3:'i.mp3', words:"tivi.mp3"}, 
+        {name:'k', mp3:'k.mp3', words:"keo.mp3"}, 
+        {name:'l', mp3:'l.mp3', words:"caila.mp3"}, 
+        {name:'m', mp3:'m.mp3', words:"me.mp3"}, 
+
+    ]
+  
+        
+    var c1=document.getElementsByClassName('cl');
+    var char=document.getElementsByClassName('character');
+    var chu=document.getElementsByClassName('chu');
+
+    for(let i=0; i<char.length; i++){
+        char[i].onclick=function(){
+            this.style.backgroundColor='red';
+            let music=new Audio( p[i].mp3);
+               music.play();
+        }
+    }
+    
+    for(let i=0; i<c1.length; i++){
+        c1[i].onclick=function(){
+            let music=new Audio( p[i].words);
+               music.play();
+        }
+    }
+   function setup(){
+        let random_chu=chu[Math.floor(Math.random()*chu.length)];
+         for(let i=0; i<chu.length; i++){
+             chu[i].style.display='none';
+        
+         }
+        let show= random_chu.style.display='block';
+            
+    }
+  setInterval(setup,4000);
+  // dieu trang
+  function move(){
+    window.location='trochoi.html'
+  }
+</script>
+</html>
